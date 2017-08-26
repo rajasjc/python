@@ -1097,4 +1097,60 @@ fatal: Not a git repository (or any of the parent directories): .git
 bash-3.2$ pwd
 /Users/nagee/class
 bash-3.2$ git clien[12@(reverse-i-search)`':[C[C[C[C[C[C[C[C[C[C
-bash-3.2$ git clone https://github.com/l
+bash-3.2$ git clone https://github.com/lmnarajan/p[K[K[K[K/python.git
+fatal: destination path 'python' already exists and is not an empty directory.
+bash-3.2$ cd python/
+bash-3.2$ ls
+05_jun.txt		find_fs.py		kanna.py
+09_july			find_user_gt_200.py	passwd
+check_list.py		flip_the_coin.py	scope.py
+dic.py			iter_dic.py
+bash-3.2$ mv ../2
+24thAug   25thJuly  26thAug   
+bash-3.2$ mv ../2
+24thAug   25thJuly  26thAug   
+bash-3.2$ mv ../2*th* .
+bash-3.2$ ls
+05_jun.txt		check_list.py		iter_dic.py
+09_july			dic.py			kanna.py
+24thAug			find_fs.py		passwd
+25thJuly		find_user_gt_200.py	scope.py
+26thAug			flip_the_coin.py
+bash-3.2$ git add .
+bash-3.2$ git commit -m "latest files"
+[master 8a6e84e] latest files
+ Committer: Nagarajan <nagee@raj.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 5 files changed, 2157 insertions(+)
+ create mode 100644 24thAug
+ create mode 100644 25thJuly
+ create mode 100644 26thAug
+ create mode 100644 check_list.py
+ create mode 100644 scope.py
+bash-3.2$ git puth[K[Ksh
+Counting objects: 7, done.
+Delta compression using up to 2 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 220.22 KiB | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas:   0% (0/1)   [Kremote: Resolving deltas: 100% (1/1)   [Kremote: Resolving deltas: 100% (1/1), completed with 1 local object.[K
+To https://github.com/lmnagaraj/python.git
+   b72305a..8a6e84e  master -> master
+bash-3.2$ cd [K[K[Kcd ..
+bash-3.2$ ls
+3		class_method	exception	log		python
+4		class_one	find_shell.py	new_dir		raja.pyc
+c		ex		inheritence	one.py		st
+class-Jul29th	example.log	kanna.pyc	one.pyc
+bash-3.2$ 
