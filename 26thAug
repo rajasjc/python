@@ -1,0 +1,1100 @@
+Script started on Sat Aug 26 15:48:51 2017
+[?1034hbash-3.2$ ls -l
+total 3680
+-rw-r--r--   1 nagee  staff   482542 Aug 26 15:40 24thAug
+-rw-r--r--   1 nagee  staff  1279626 Jul 29 22:40 25thJuly
+-rw-r--r--   1 nagee  staff       43 Aug 26 15:48 26thAug
+-rw-r--r--   1 nagee  staff      343 Aug  6 18:14 3
+-rw-r--r--   1 nagee  staff      241 Aug  4 22:16 4
+-rw-r--r--   1 nagee  staff      667 Aug  4 22:27 c
+-rw-r--r--   1 nagee  staff    52912 Jul 29 22:40 class-Jul29th
+-rw-r--r--   1 nagee  staff      378 Aug  6 21:56 class_method
+-rw-r--r--   1 nagee  staff      172 Aug  6 21:45 class_one
+-rw-r--r--   1 nagee  staff      550 Aug  4 22:28 ex
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:54 example.log
+-rw-r--r--   1 nagee  staff      207 Jul 29 21:45 exception
+-rw-r--r--   1 nagee  staff      212 Jul 29 21:10 inheritence
+-rw-r--r--   1 nagee  staff      535 Jul 29 22:34 kanna.pyc
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:56 log
+drwxr-xr-x   4 nagee  staff      136 Jul 29 22:37 new_dir
+-rw-r--r--   1 nagee  staff      223 Jul 24 18:13 one.py
+-rw-r--r--   1 nagee  staff      836 Jul 24 18:14 one.pyc
+drwxr-xr-x  14 nagee  staff      476 Aug 24 21:26 python
+-rw-r--r--   1 nagee  staff      531 Jul 29 22:34 raja.pyc
+-rw-r--r--   1 nagee  staff      333 Aug  6 18:37 st
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ p[Kls -ltr
+total 3680
+-rw-r--r--   1 nagee  staff      223 Jul 24 18:13 one.py
+-rw-r--r--   1 nagee  staff      836 Jul 24 18:14 one.pyc
+-rw-r--r--   1 nagee  staff      212 Jul 29 21:10 inheritence
+-rw-r--r--   1 nagee  staff      207 Jul 29 21:45 exception
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:54 example.log
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:56 log
+-rw-r--r--   1 nagee  staff      535 Jul 29 22:34 kanna.pyc
+-rw-r--r--   1 nagee  staff      531 Jul 29 22:34 raja.pyc
+drwxr-xr-x   4 nagee  staff      136 Jul 29 22:37 new_dir
+-rw-r--r--   1 nagee  staff    52912 Jul 29 22:40 class-Jul29th
+-rw-r--r--   1 nagee  staff  1279626 Jul 29 22:40 25thJuly
+-rw-r--r--   1 nagee  staff      241 Aug  4 22:16 4
+-rw-r--r--   1 nagee  staff      667 Aug  4 22:27 c
+-rw-r--r--   1 nagee  staff      550 Aug  4 22:28 ex
+-rw-r--r--   1 nagee  staff      343 Aug  6 18:14 3
+-rw-r--r--   1 nagee  staff      333 Aug  6 18:37 st
+-rw-r--r--   1 nagee  staff      172 Aug  6 21:45 class_one
+-rw-r--r--   1 nagee  staff      378 Aug  6 21:56 class_method
+drwxr-xr-x  14 nagee  staff      476 Aug 24 21:26 python
+-rw-r--r--   1 nagee  staff   482542 Aug 26 15:40 24thAug
+-rw-r--r--   1 nagee  staff       43 Aug 26 15:48 26thAug
+bash-3.2$ python
+Python 2.7.10 (default, Oct 23 2015, 19:19:21) 
+[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> data = {'InstanceStatuses': [{'AvailabilityZone': 'ap-southeast-2b', 'InstanceId ': 'i-02edcd70e7cdcec60', 'InstanceState': {'Code': 16, 'Name': 'running'}, 'Instanc eStatus': {'Details': [{'Name': 'reachability', 'Status': 'passed'}], 'Status': 'ok' }, 'SystemStatus': {'Details': [{'Name': 'reachability', 'Status': 'passed'}], 'Stat us': 'ok'}}], 'ResponseMetadata': {'RequestId': '88cd81d1-d0f7-47c9-85c9-235084ece02 3', 'HTTPStatusCode': 200, 'HTTPHeaders': {'content-type': 'text/xml;charset=UTF-8',  'transfer-encoding': 'chunked', 'vary': 'Accept-Encoding', 'date': 'Sat, 26 Aug 201 7 05:40:26 GMT', 'server': 'AmazonEC2'}, 'RetryAttempts': 0}}
+>>> 
+>>> data
+{'InstanceStatuses': [{'InstanceId': 'i-02edcd70e7cdcec60', 'InstanceState': {'Code': 16, 'Name': 'running'}, 'AvailabilityZone': 'ap-southeast-2b', 'SystemStatus': {'Status': 'ok', 'Details': [{'Status': 'passed', 'Name': 'reachability'}]}, 'InstanceStatus': {'Status': 'ok', 'Details': [{'Status': 'passed', 'Name': 'reachability'}]}}], 'ResponseMetadata': {'RetryAttempts': 0, 'HTTPStatusCode': 200, 'RequestId': '88cd81d1-d0f7-47c9-85c9-235084ece023', 'HTTPHeaders': {'transfer-encoding': 'chunked', 'vary': 'Accept-Encoding', 'server': 'AmazonEC2', 'content-type': 'text/xml;charset=UTF-8', 'date': 'Sat, 26 Aug 2017 05:40:26 GMT'}}}
+>>> data.keys()
+['InstanceStatuses', 'ResponseMetadata']
+>>> data.[K[ResponseMetadata]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'ResponseMetadata' is not defined
+>>> data[ResponseMetadata]'][1@'R
+{'RetryAttempts': 0, 'HTTPStatusCode': 200, 'RequestId': '88cd81d1-d0f7-47c9-85c9-235084ece023', 'HTTPHeaders': {'transfer-encoding': 'chunked', 'vary': 'Accept-Encoding', 'server': 'AmazonEC2', 'content-type': 'text/xml;charset=UTF-8', 'date': 'Sat, 26 Aug 2017 05:40:26 GMT'}}
+>>> data['ResponseMetadata'].has_key('RequestId')
+True
+>>> data
+{'InstanceStatuses': [{'InstanceId': 'i-02edcd70e7cdcec60', 'InstanceState': {'Code': 16, 'Name': 'running'}, 'AvailabilityZone': 'ap-southeast-2b', 'SystemStatus': {'Status': 'ok', 'Details': [{'Status': 'passed', 'Name': 'reachability'}]}, 'InstanceStatus': {'Status': 'ok', 'Details': [{'Status': 'passed', 'Name': 'reachability'}]}}], 'ResponseMetadata': {'RetryAttempts': 0, 'HTTPStatusCode': 200, 'RequestId': '88cd81d1-d0f7-47c9-85c9-235084ece023', 'HTTPHeaders': {'transfer-encoding': 'chunked', 'vary': 'Accept-Encoding', 'server': 'AmazonEC2', 'content-type': 'text/xml;charset=UTF-8', 'date': 'Sat, 26 Aug 2017 05:40:26 GMT'}}}
+>>> type(data)
+<type 'dict'>
+>>> type(data))[5G[1@stt[1@ty[1@rt[1@(t
+"<type 'dict'>"
+>>> 'dict' in str(type(data))
+True
+>>> 'dict' in str(type(data))[5G'dict[P'[P'[P'[P'[1@l'[1@i'[1@s'[1@t'
+False
+>>> 'list' in str(type(data))[6Gdic[30G[5G[10Ps[20G(ty[5G[4P[14G)[K
+<type 'dict'>
+>>> type(data))[5Gt[1@ty[1@yt[1@pt[1@et[1@(t
+<type 'type'>
+>>> '[Kkanna = naga[K[K[K[K'naga'
+>>> 'naga' in kanna
+True
+>>> 'naga' in kanna[5G[8@kanna = [19G[K[K[K[K[K[K[Kp[K[ 'naga', 'raj' ]
+>>> kanna = [ 'naga', 'raj' ][5G[10P[11G in kanna[5G[8@kanna = [19G[K[5G[8P[11G in kanna
+True
+>>> 'naga' in kanna[5G[10@kanna = [ [21G, 'raj' ][5G[10P[11G in kanna[5G[8@kanna = [19G[K[5Gtype(type(data))[P([P([P([P([1@s([1@t([1@r(
+"<type 'dict'>"
+>>> str(type(data))[5G[1@ts[1@ys[1@ps[1@es[Ps[Ps[Ps[Ps[1@'s[1@ts[1@ys[1@ps[1@es[1@'s[1@ s[1@is[1@ns[1@ s
+True
+>>> 'type' in str(type(data))[5G'type[P'[P'[P'[P'[1@d'[1@i'[1@c'[1@t'
+True
+>>> 'dict' in str(type(data))[K[Pt[Pt[Py[Pt
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: argument of type 'type' is not iterable
+>>> 
+>>> 
+>>> def [K[K[Knaga = range(10)
+>>> kanna[K[K[K[K[Kdef kanna(naga):
+...  for x in range[K[K[K[K[Knaga:
+...    return[K[K[K[K[K[Kprint(x ** 5)
+... 
+>>> k[Kkana[Kna(naga)
+0
+1
+32
+243
+1024
+3125
+7776
+16807
+32768
+59049
+>>> kanna(naga)[5G   print(x ** 5)[6Gfor x in naga:[K[5Gdef kanna(naga):[5G for x in naga:[K[6G  print(x ** 5)[5Gkanna(naga)[K[5G[Kkanna(naga))[K)[K)[K)[K1),) )2),) )3),) )4),) )5)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: kanna() takes exactly 1 argument (5 given)
+>>> kanna(1, 2, 3, 4, 5)[11Gnaga)[K[5G   print(x ** 5)[6Gfor x in naga:[K[5Gdef kanna(naga):[1@*nnaga):[K):[K):[K):[Kc):l):e):m):e):t):n):
+KeyboardInterrupt
+>>> 
+>>> def key_naga(a=10):
+...  print[K[K[K[K[Kretrun[K[K[Kurn(a)
+... 
+>>> key_naga()
+10
+>>> key_naga()a)=)1)0)0)
+100
+>>> key_naga(a=100)[14G)[K[5G return(a)[5Gdef key_naga(a=10):[5G return(a)[K[5Gkey_naga()a=100)[5G[Kkey_naga(a=100)100)[K100)[K
+100
+>>> key_naga(100))[K)[K)[K
+10
+>>> key_naga()1)0)0)
+100
+>>> def key_naga(a):
+...  return(a)
+... 
+>>>  return(a)[5Gdef key_naga(a):=):1):0):0):
+... 
+KeyboardInterrupt
+>>> def key_naga(a=100):[5G return(a)[K[5Gdef key_naga(a):[5G[4P[14G100)
+100
+>>> key_naga(100)a100)=100)
+100
+>>> key_naga(a=100))[K)[K)[K)[K)[K
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: key_naga() takes exactly 1 argument (0 given)
+>>> def key_naga(a=100, b='naga'):
+...  return(a, b)
+... 
+>>> key_naga()
+(100, 'naga')
+>>> key_naga()[5G return(a, b)[5Gdef key_naga(a=100, b='naga'):
+...  return a
+... r[K return b
+... 
+>>>  return ba[5Gdef key_naga(a=100, b='naga'):
+... def key_naga(a=100, b='naga'):
+KeyboardInterrupt
+>>> def key_naga(a=100, b='naga'):[5G return b[Ka[5Gdef key_naga(a=100, b='naga'):[5G[4P[14G)[K
+100
+>>> key_naga()[5G[Kdef key_naga(a=100, b='naga'):
+...  return(a, b)
+... 
+>>> key-[K_naga(200, 300)
+(200, 300)
+>>> key_naga(200, 300)[P,[P,[P,[1@n,[1@a,[1@g,[1@a,
+([0, 1, 2, 3, 4, 5, 6, 7, 8, 9], 300)
+>>> naga
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> naga[4@key_naga(naga, 300)[1@1,
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'naga1' is not defined
+>>> key_naga(naga1, 300)[1@',[1@'n
+('naga1', 300)
+>>> key_naga('naga1', 300)[K[K[K[K[K[K[K[K[K[K[K[K100, 200)
+(100, 200)
+>>> key_naga(100, 200)a200)=200)[1@b1[1@=1
+(200, 100)
+>>> key_naga(b=100, a=200)[14G[2P[19G[2P200)[14G'naga1', 300)[14G[P[19G[P[25G[5G[4Pnaga[K[4@key_naga(naga, 300)[14G[P200[23G[5G return(a, b)[K[5Gdef key_naga(a=100, b='naga'):'):[K):[K):[K):[K):[K):[K):[K):[K):[K):[K):[K):[K):[K):[K):[K*):c):l):e):m):e):n):t):
+...  rerut[K[K[Kturn(clemnet[K[K[Kent)
+... 
+>>>  return(clement)[5Gdef key_naga(*clement):[5G[4P[14Gb=100, a=200)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: key_naga() got an unexpected keyword argument 'b'
+>>> key_naga(b=100, a=200)[5G return(clement)[K[5Gdef key_naga(*clement):[1@*c
+...  return(clement)
+... 
+>>>  return(clement)[5Gdef key_naga(**clement):[5G[4P[14Gb=100, a=200)
+{'a': 200, 'b': 100}
+>>> key_naga(b=100, a=200)[5G return(clement)[K[5Gdef key_naga(**clement):**[1@*c[1@k*[1@a*[1@n*[1@t*[1@h*[1@,*[1@ *
+...  return(kanth, clemn[Kent)
+... 
+>>>  return(kanth, clement)[5Gdef key_naga(*kanth, **clement):[5G[4P[14Gb=100, a=200)[K[1@ab[1@,b[1@ b[1@3b[1@,b[Pb[Pb[Pb[Pb[Pb[1@1b[1@,b[1@ b[1@2b[1@,b[1@ b[1@3b[1@,b[1@ b[1@'b[1@nb[1@ab[1@gb[1@ab[1@'b[1@,b[1@ b
+((1, 2, 3, 'naga'), {'a': 200, 'b': 100})
+>>> key_naga(1, 2, 3, 'naga', b=100, a=200)[5G return(kanth, clement)[K[5Gdef key_naga(*kanth, **clement):[P*[P*[P*[P*[P*[P*[P**[Pc**clement,): ):*):k):a):n):t):h):
+  File "<stdin>", line 1
+    def key_naga(**clement, *kanth):
+                          ^
+SyntaxError: invalid syntax
+>>> def key_naga(**clement, *kanth):[P**[P*[1@ *[1@,*[1@ *
+  File "<stdin>", line 1
+    def key_naga(**clement , *kanth):
+                           ^
+SyntaxError: invalid syntax
+>>> def key_naga(**clement , *kanth):[P*[P*[P*[1@,*
+  File "<stdin>", line 1
+    def key_naga(**clement,*kanth):
+                          ^
+SyntaxError: invalid syntax
+>>> def key_naga(**clement,*kanth):[1@k*[1@e*[1@y*[1@_*[1@n*[1@a*[1@g*[1@a*[1@(*[1@b*[1@=*[1@1*[1@0*[1@0*[1@,*[1@ *[1@a*[1@=*[1@2*[1@0*[1@0*[1@)*
+  File "<stdin>", line 1
+    def key_naga(**clement,key_naga(b=100, a=200)*kanth):
+                          ^
+SyntaxError: invalid syntax
+>>> (200, 100)
+KeyboardInterrupt
+>>> def key_naga(**clement,key_naga(b=100, a=200)*kanth):[28G[22P*[36G[1@ *
+  File "<stdin>", line 1
+    def key_naga(**clement, *kanth):
+                          ^
+SyntaxError: invalid syntax
+>>> def key_naga(**clement, *kanth):[P*
+  File "<stdin>", line 1
+    def key_naga(**clement,*kanth):
+                          ^
+SyntaxError: invalid syntax
+>>> def key_naga(**clement,*kanth):[1@*k[Pc
+...  rerunt[K[K[K[Ktuirn[K[K[Krn(clement, kanr[Kth)
+... 
+>>> key_naga(a=10, b[K1, 2)
+  File "<stdin>", line 1
+SyntaxError: non-keyword arg after keyword arg
+>>> key_naga(a=10, 1, 2)2)[K)[K)[K)[K)[K)[K[1@1a[1@,a[1@ a[1@2a[1@,a[1@ a
+((1, 2), {'a': 10})
+>>> 
+>>> 
+>>> exit()
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ cat /ec/[K[Ktc/passwd
+##
+# User Database
+# 
+# Note that this file is consulted directly only when the system is running
+# in single-user mode.  At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false
+_appleevents:*:55:55:AppleEvents Daemon:/var/empty:/usr/bin/false
+_geod:*:56:56:Geo Services Daemon:/var/db/geod:/usr/bin/false
+_serialnumberd:*:58:58:Serial Number Daemon:/var/empty:/usr/bin/false
+_devdocs:*:59:59:Developer Documentation:/var/empty:/usr/bin/false
+_sandbox:*:60:60:Seatbelt:/var/empty:/usr/bin/false
+_mdnsresponder:*:65:65:mDNSResponder:/var/empty:/usr/bin/false
+_ard:*:67:67:Apple Remote Desktop:/var/empty:/usr/bin/false
+_www:*:70:70:World Wide Web Server:/Library/WebServer:/usr/bin/false
+_eppc:*:71:71:Apple Events User:/var/empty:/usr/bin/false
+_cvs:*:72:72:CVS Server:/var/empty:/usr/bin/false
+_svn:*:73:73:SVN Server:/var/empty:/usr/bin/false
+_mysql:*:74:74:MySQL Server:/var/empty:/usr/bin/false
+_sshd:*:75:75:sshd Privilege separation:/var/empty:/usr/bin/false
+_qtss:*:76:76:QuickTime Streaming Server:/var/empty:/usr/bin/false
+_cyrus:*:77:6:Cyrus Administrator:/var/imap:/usr/bin/false
+_mailman:*:78:78:Mailman List Server:/var/empty:/usr/bin/false
+_appserver:*:79:79:Application Server:/var/empty:/usr/bin/false
+_clamav:*:82:82:ClamAV Daemon:/var/virusmails:/usr/bin/false
+_amavisd:*:83:83:AMaViS Daemon:/var/virusmails:/usr/bin/false
+_jabber:*:84:84:Jabber XMPP Server:/var/empty:/usr/bin/false
+_appowner:*:87:87:Application Owner:/var/empty:/usr/bin/false
+_windowserver:*:88:88:WindowServer:/var/empty:/usr/bin/false
+_spotlight:*:89:89:Spotlight:/var/empty:/usr/bin/false
+_tokend:*:91:91:Token Daemon:/var/empty:/usr/bin/false
+_securityagent:*:92:92:SecurityAgent:/var/empty:/usr/bin/false
+_calendar:*:93:93:Calendar:/var/empty:/usr/bin/false
+_teamsserver:*:94:94:TeamsServer:/var/teamsserver:/usr/bin/false
+_update_sharing:*:95:-2:Update Sharing:/var/empty:/usr/bin/false
+_installer:*:96:-2:Installer:/var/empty:/usr/bin/false
+_atsserver:*:97:97:ATS Server:/var/empty:/usr/bin/false
+_ftp:*:98:-2:FTP Daemon:/var/empty:/usr/bin/false
+_unknown:*:99:99:Unknown User:/var/empty:/usr/bin/false
+_softwareupdate:*:200:200:Software Update Service:/var/empty:/usr/bin/false
+_coreaudiod:*:202:202:Core Audio Daemon:/var/empty:/usr/bin/false
+_screensaver:*:203:203:Screensaver:/var/empty:/usr/bin/false
+_locationd:*:205:205:Location Daemon:/var/db/locationd:/usr/bin/false
+_trustevaluationagent:*:208:208:Trust Evaluation Agent:/var/empty:/usr/bin/false
+_timezone:*:210:210:AutoTimeZoneDaemon:/var/empty:/usr/bin/false
+_lda:*:211:211:Local Delivery Agent:/var/empty:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+_usbmuxd:*:213:213:iPhone OS Device Helper:/var/db/lockdown:/usr/bin/false
+_dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
+_dpaudio:*:215:215:DP Audio:/var/empty:/usr/bin/false
+_postgres:*:216:216:PostgreSQL Server:/var/empty:/usr/bin/false
+_krbtgt:*:217:-2:Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
+_kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/false
+_devicemgr:*:220:220:Device Management Server:/var/empty:/usr/bin/false
+_webauthserver:*:221:221:Web Auth Server:/var/empty:/usr/bin/false
+_netbios:*:222:222:NetBIOS:/var/empty:/usr/bin/false
+_warmd:*:224:224:Warm Daemon:/var/empty:/usr/bin/false
+_dovenull:*:227:227:Dovecot Authentication:/var/empty:/usr/bin/false
+_netstatistics:*:228:228:Network Statistics Daemon:/var/empty:/usr/bin/false
+_avbdeviced:*:229:-2:Ethernet AVB Device Daemon:/var/empty:/usr/bin/false
+_krb_krbtgt:*:230:-2:Open Directory Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
+_krb_changepw:*:232:-2:Open Directory Kerberos Change Password Service:/var/empty:/usr/bin/false
+_krb_kerberos:*:233:-2:Open Directory Kerberos:/var/empty:/usr/bin/false
+_krb_anonymous:*:234:-2:Open Directory Kerberos Anonymous:/var/empty:/usr/bin/false
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_coremediaiod:*:236:236:Core Media IO Daemon:/var/empty:/usr/bin/false
+_xcsbuildagent:*:237:237:Xcode Server Build Agent:/var/empty:/usr/bin/false
+_xcscredserver:*:238:238:Xcode Server Credential Server:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+bash-3.2$ python
+Python 2.7.10 (default, Oct 23 2015, 19:19:21) 
+[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> def kanna(a=10, *naga):
+...  rerunt[K[K[K[Ktrun[K[K[Kurn(a, naga)
+... 
+>>> kanna(a=100, 4,5, [K[K 5, 6)
+  File "<stdin>", line 1
+SyntaxError: non-keyword arg after keyword arg
+>>> kanna(a=100, 4, 5, 6)[P1[P1
+(100, (4, 5, 6))
+>>> kanna(100, 4, 5, 6)[5G[Kreturn([a , naga])[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kkanna(100, 4, 5, 6)[11G[2@a=1[26G[5G return(a, naga)[K[5Gdef kanna(a=10, *naga):,): ):*):*):k):a):n):t):h):
+...  retugn[K[Krn(a, naga, kath[K[Knth)
+... 
+>>>  return(a, naga, kanth)[5Gdef kanna(a=10, *naga, **kanth):[5G[4P[11G100, 4, 5, 6)[K,) )a)=)1)0),) )b)=)2)0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: kanna() got multiple values for keyword argument 'a'
+>>> kanna(100, 4, 5, 6, a=10, b=20)'=20)[1@'b[1@'=[1@'a
+  File "<stdin>", line 1
+SyntaxError: keyword can't be an expression
+>>> kanna(100, 4, 5, 6, 'a'=10, 'b'=20)20)[K:20):20)[K[Pb[P1'[1@:1[P:[Pa
+  File "<stdin>", line 1
+    kanna(100, 4, 5, 6, a:10, b:20)
+                         ^
+SyntaxError: invalid syntax
+>>> kanna(100, 4, 5, 6, a:10, b:20)[25G'a'=10, 'b'=20)=20)[K=20)[K=20)[Kb=20)=20)[Kc=20)[P=[P=[P=[1@d=
+(100, (4, 5, 6), {'c': 20, 'd': 10})
+>>> kanna(100, 4, 5, 6, d=10, c=20)[1@a1[1@=1
+  File "<stdin>", line 1
+SyntaxError: non-keyword arg after keyword arg
+>>> kanna(a=100, 4, 5, 6, d=10, c=20)[5Gkanna(a=[P1[P1
+(100, (4, 5, 6), {'c': 20, 'd': 10})
+>>> kanna(100, 4, 5, 6, d=10, c=20)[11G[2@a=1[38G[11G[2P1[36G[25Ga:10, b:20)[25G'a'=10, 'b'=20)[25G[4Pa=10, b=20)[5G return(a, naga, kanth)[K[5Gdef kanna(a=10, *naga, **kanth):
+...  rerung[K[Krn(kanth, naga, a)
+... 
+>>>  rerurn(kanth, naga, a)[5Gdef kanna(a=10, *naga, **kanth):[5G[4P[11G100, 4, 5, 6, d=10, c=20)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<stdin>", line 2, in kanna
+NameError: global name 'rerurn' is not defined
+>>> kanna(100, 4, 5, 6, d=10, c=20)[5G rerurn(kanth, naga, a)[K[5Gdef kanna(a=10, *naga, **kanth):
+... def kanna(a=10, *naga, **kanth):[5G[4P[11G100, 4, 5, 6, d=10, c=20)[5G rerurn(kanth, naga, a)[K[Pn[Pn[Pn[1@tn[1@un[1@rn
+... 
+>>>  return(kanth, naga, a)[5Gdef kanna(a=10, *naga, **kanth):[5G[4P[11G100, 4, 5, 6, d=10, c=20)
+({'c': 20, 'd': 10}, (4, 5, 6), 100)
+>>> exit()
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ clear
+[H[2Jbash-3.2$ 
+bash-3.2$ cat /et/[Kc/passwd
+##
+# User Database
+# 
+# Note that this file is consulted directly only when the system is running
+# in single-user mode.  At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false
+_appleevents:*:55:55:AppleEvents Daemon:/var/empty:/usr/bin/false
+_geod:*:56:56:Geo Services Daemon:/var/db/geod:/usr/bin/false
+_serialnumberd:*:58:58:Serial Number Daemon:/var/empty:/usr/bin/false
+_devdocs:*:59:59:Developer Documentation:/var/empty:/usr/bin/false
+_sandbox:*:60:60:Seatbelt:/var/empty:/usr/bin/false
+_mdnsresponder:*:65:65:mDNSResponder:/var/empty:/usr/bin/false
+_ard:*:67:67:Apple Remote Desktop:/var/empty:/usr/bin/false
+_www:*:70:70:World Wide Web Server:/Library/WebServer:/usr/bin/false
+_eppc:*:71:71:Apple Events User:/var/empty:/usr/bin/false
+_cvs:*:72:72:CVS Server:/var/empty:/usr/bin/false
+_svn:*:73:73:SVN Server:/var/empty:/usr/bin/false
+_mysql:*:74:74:MySQL Server:/var/empty:/usr/bin/false
+_sshd:*:75:75:sshd Privilege separation:/var/empty:/usr/bin/false
+_qtss:*:76:76:QuickTime Streaming Server:/var/empty:/usr/bin/false
+_cyrus:*:77:6:Cyrus Administrator:/var/imap:/usr/bin/false
+_mailman:*:78:78:Mailman List Server:/var/empty:/usr/bin/false
+_appserver:*:79:79:Application Server:/var/empty:/usr/bin/false
+_clamav:*:82:82:ClamAV Daemon:/var/virusmails:/usr/bin/false
+_amavisd:*:83:83:AMaViS Daemon:/var/virusmails:/usr/bin/false
+_jabber:*:84:84:Jabber XMPP Server:/var/empty:/usr/bin/false
+_appowner:*:87:87:Application Owner:/var/empty:/usr/bin/false
+_windowserver:*:88:88:WindowServer:/var/empty:/usr/bin/false
+_spotlight:*:89:89:Spotlight:/var/empty:/usr/bin/false
+_tokend:*:91:91:Token Daemon:/var/empty:/usr/bin/false
+_securityagent:*:92:92:SecurityAgent:/var/empty:/usr/bin/false
+_calendar:*:93:93:Calendar:/var/empty:/usr/bin/false
+_teamsserver:*:94:94:TeamsServer:/var/teamsserver:/usr/bin/false
+_update_sharing:*:95:-2:Update Sharing:/var/empty:/usr/bin/false
+_installer:*:96:-2:Installer:/var/empty:/usr/bin/false
+_atsserver:*:97:97:ATS Server:/var/empty:/usr/bin/false
+_ftp:*:98:-2:FTP Daemon:/var/empty:/usr/bin/false
+_unknown:*:99:99:Unknown User:/var/empty:/usr/bin/false
+_softwareupdate:*:200:200:Software Update Service:/var/empty:/usr/bin/false
+_coreaudiod:*:202:202:Core Audio Daemon:/var/empty:/usr/bin/false
+_screensaver:*:203:203:Screensaver:/var/empty:/usr/bin/false
+_locationd:*:205:205:Location Daemon:/var/db/locationd:/usr/bin/false
+_trustevaluationagent:*:208:208:Trust Evaluation Agent:/var/empty:/usr/bin/false
+_timezone:*:210:210:AutoTimeZoneDaemon:/var/empty:/usr/bin/false
+_lda:*:211:211:Local Delivery Agent:/var/empty:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+_usbmuxd:*:213:213:iPhone OS Device Helper:/var/db/lockdown:/usr/bin/false
+_dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
+_dpaudio:*:215:215:DP Audio:/var/empty:/usr/bin/false
+_postgres:*:216:216:PostgreSQL Server:/var/empty:/usr/bin/false
+_krbtgt:*:217:-2:Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
+_kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/false
+_devicemgr:*:220:220:Device Management Server:/var/empty:/usr/bin/false
+_webauthserver:*:221:221:Web Auth Server:/var/empty:/usr/bin/false
+_netbios:*:222:222:NetBIOS:/var/empty:/usr/bin/false
+_warmd:*:224:224:Warm Daemon:/var/empty:/usr/bin/false
+_dovenull:*:227:227:Dovecot Authentication:/var/empty:/usr/bin/false
+_netstatistics:*:228:228:Network Statistics Daemon:/var/empty:/usr/bin/false
+_avbdeviced:*:229:-2:Ethernet AVB Device Daemon:/var/empty:/usr/bin/false
+_krb_krbtgt:*:230:-2:Open Directory Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
+_krb_changepw:*:232:-2:Open Directory Kerberos Change Password Service:/var/empty:/usr/bin/false
+_krb_kerberos:*:233:-2:Open Directory Kerberos:/var/empty:/usr/bin/false
+_krb_anonymous:*:234:-2:Open Directory Kerberos Anonymous:/var/empty:/usr/bin/false
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_coremediaiod:*:236:236:Core Media IO Daemon:/var/empty:/usr/bin/false
+_xcsbuildagent:*:237:237:Xcode Server Build Agent:/var/empty:/usr/bin/false
+_xcscredserver:*:238:238:Xcode Server Credential Server:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ [[Kpython
+Python 2.7.10 (default, Oct 23 2015, 19:19:21) 
+[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> de[K[Kretru[K[Kr[Kurn naga
+  File "<stdin>", line 1
+SyntaxError: 'return' outside function
+>>> def naga():
+...  rerutn[K[Krn({})
+... 
+>>> nag[K[K[Ktype(naga)
+<type 'function'>
+>>> naga
+<function naga at 0x10e45c578>
+>>> nagarnagaanagajnaga naga naganaga[Knaga[K naga=naga naga
+>>> type(raj)
+<type 'function'>
+>>> raj
+<function naga at 0x10e45c578>
+>>> rajtype(raj)[5Graj = naga[5Gnaga[K[5@type(naga)[5G rerurn({})[5Gdef naga():
+... def naga():[5Graj[Ktype(raj)[5Graj = naga[5Gnaga[K[5@type(naga)[5G rerurn({})a})=})1})0})
+  File "<stdin>", line 2
+    rerurn({a=10})
+             ^
+SyntaxError: invalid syntax
+>>>  rerurn({a=10})10})[K:10})
+  File "<stdin>", line 1
+    rerurn({a:10})
+    ^
+IndentationError: unexpected indent
+>>>  rerurn({a:10})[15G=10})[5Gdef naga():[K
+... def naga():[5G rerurn({a:10})[15G=10})[5Gdef naga():[K[5G rerurn({a=10})[1@ {{[1@ aa=[1@ == 10})10 })
+  File "<stdin>", line 2
+    rerurn( { a = 10 })
+                ^
+SyntaxError: invalid syntax
+>>> 
+>>> 
+>>> 
+>>> def naga()
+  File "<stdin>", line 1
+    def naga()
+             ^
+SyntaxError: invalid syntax
+>>>  def naga():
+...  ne[K[Kdata = {}
+...  return(data)
+... 
+>>>  return(data)[6G[7Pdata = {}[5Gdef naga():[5G data = {}[K[6G[7@return(data)[K[5G[K
+>>> 
+>>> def find_user[K[K[K[Kshee;[K[K;;[K[K;[Kll(uid):
+...  
+KeyboardInterrupt
+>>> import commands
+>>> import commands[5Gdef find_shell(uid):
+...  passwd_string = import[K[K[K[K[K[Kcommands.getoutput('cat /etc/passwd')
+...  passwd_li[K[K[K[K[K[K[K[K[Kfor line in passwd_string[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdata = {}
+...  for line in passwd_string.split('\n'):
+...   if line.startswtih[K[K[Kith('#'):
+...    continue
+...   lines = line.split(':')
+...   if lines[1] == uid:
+...    
+  File "<stdin>", line 8
+    if lines[1] == uid:
+                      ^
+IndentationError: expected an indented block
+>>>   if lines[1] == uid:[7G[3P[12G = line.split(':')[7G continue[K[7Gif line.startswith('#'):[6Gfor line in passwd_string.split('\n'):[6Gdata = {}[K[6Gfor line in passwd_string.split('\n'):[6Gdata = {}[K[6Gpasswd_string = commands.getoutput('cat /etc/passwd')[5Gdef find_shell(uid):[K[5Gimport commands[K[5Gdef find_shell(uid):
+... def find_shell(uid):[5G  if lines[1] == uid:[7G[3P[12G = line.split(':')[7G continue[K[7Gif line.startswith('#'):[6Gfor line in passwd_string.split('\n'):[6Gdata = {}[K[6Gfor line in passwd_string.split('\n'):
+...  for line in passwd_string.split('\n'):[5Gdef find_shell(uid):[K[5G  if lines[1] == uid:[7G[3P[12G = line.split(':')[7G continue[K[7Gif line.startswith('#'):[6Gfor line in passwd_string.split('\n'):[6Gdata = {}[K[6Gpasswd_string = commands.getoutput('cat /etc/passwd')
+  File "<stdin>", line 2
+    for line in passwd_string.split('\n'):
+                                         ^
+IndentationError: expected an indented block
+>>> exit()
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ vi find.[K_shell.py
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" [New File][>c[2;1H[94m~                                                                                   [3;1H~                                                                                   [4;1H~                                                                                   [5;1H~                                                                                   [6;1H~                                                                                   [7;1H~                                                                                   [8;1H~                                                                                   [9;1H~                                                                                   [10;1H~                                                                                   [11;1H~                                                                                   [12;1H~                                                                                   [13;1H~                                                                                   [14;1H~                                                                                   [15;1H~                                                                                   [16;1H~                                                                                   [17;1H~                                                                                   [18;1H~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h[?25l[m[23;1H[1m-- INSERT --[m[23;13H[K[1;1H[?12l[?25h[?25l#[?12l[?25h[?25l#![?12l[?25h[?25l!/[?12l[?25h[?25l/u[?12l[?25h[?25lus[?12l[?25h[?25lsr[?12l[?25h[?25lr/[?12l[?25h[?25l/b[?12l[?25h[?25lbi[?12l[?25h[?25lin[?12l[?25h[?25ln/[?12l[?25h[?25l/e[?12l[?25h[?25len[?12l[?25h[?25lnv[?12l[?25h[?25l [?12l[?25h[?25l p[?12l[?25h[?25lpy[?12l[?25h[?25lyt[?12l[?25h[?25lth[?12l[?25h[?25lho[?12l[?25h[?25lon[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l[3;1H[K[3;1H[?12l[?25h[?25li[?12l[?25h[?25lim[?12l[?25h[?25lmp[?12l[?25h[?25lpo[?12l[?25h[?25lor[?12l[?25h[?25lrt[?12l[?25h[?25l [?12l[?25h[?25l c[?12l[?25h[?25lco[?12l[?25h[?25lom[?12l[?25h[?25lmm[?12l[?25h[?25lma[?12l[?25h[?25lan[?12l[?25h[?25lnd[?12l[?25h[?25lds[?12l[?25h[?25l[4;1H[K[4;1H[?12l[?25h[?25l[5;1H[K[5;1H[?12l[?25h[?25lf[?12l[?25h[?25lfo[?12l[?25h[?25lor[?12l[?25h[?25l[5;3H[K[5;3H[?12l[?25h[?25l[5;2H[K[5;2H[?12l[?25h[?25l[5;1H[K[5;1H[?12l[?25h[?25lp[?12l[?25h[?25lpa[?12l[?25h[?25las[?12l[?25h[?25lss[?12l[?25h[?25lsw[?12l[?25h[?25lwd[?12l[?25h[?25ld_[?12l[?25h[?25l_f[?12l[?25h[?25lfi[?12l[?25h[?25lil[?12l[?25h[?25lle[?12l[?25h[?25l [?12l[?25h[?25l =[?12l[?25h[?25l [?12l[?25h[?25l c[?12l[?25h[?25lco[?12l[?25h[?25lom[?12l[?25h[?25lmm[?12l[?25h[?25lma[?12l[?25h[?25lan[?12l[?25h[?25lnd[?12l[?25h[?25lds[?12l[?25h[?25ls.[?12l[?25h[?25l.g[?12l[?25h[?25lge[?12l[?25h[?25let[?12l[?25h[?25lto[?12l[?25h[?25lou[?12l[?25h[?25lup[?12l[?25h[?25lpt[?12l[?25h[?25l[5;30H[K[5;30H[?12l[?25h[?25l[5;29H[K[5;29H[?12l[?25h[?25lut[?12l[?25h[?25ltp[?12l[?25h[?25lpu[?12l[?25h[?25lut[?12l[?25h[?25lt([?12l[?25h[?25l('[?12l[?25h[?25l'c[?12l[?25h[?25lca[?12l[?25h[?25lat[?12l[?25h[?25l [?12l[?25h[?25l /[?12l[?25h[?25l/e[?12l[?25h[?25let[?12l[?25h[?25ltc[?12l[?25h[?25lc/[?12l[?25h[?25l/p[?12l[?25h[?25lpa[?12l[?25h[?25las[?12l[?25h[?25lss[?12l[?25h[?25lsw[?12l[?25h[?25lwd[?12l[?25h[?25ld'[?12l[?25h[?25l[5;33H[46m([m[16C'[46m)[?12l[?25h[?25l[m[5;33H([17C)[6;1H[K[6;1H[?12l[?25h[?25l[7;1H[K[7;1H[?12l[?25h[?25lf[?12l[?25h[?25lfo[?12l[?25h[?25lor[?12l[?25h[?25l [?12l[?25h[?25l l[?12l[?25h[?25lli[?12l[?25h[?25lin[?12l[?25h[?25lne[?12l[?25h[?25l [?12l[?25h[?25l i[?12l[?25h[?25lin[?12l[?25h[?25l [?12l[?25h[?25l passwd_file[?12l[?25h[?25le.[?12l[?25h[?25l.s[?12l[?25h[?25lsp[?12l[?25h[?25lpl[?12l[?25h[?25lli[?12l[?25h[?25lit[?12l[?25h[?25lt([?12l[?25h[?25l('[?12l[?25h[?25l'\[?12l[?25h[?25l\m[?12l[?25h[?25l[7;33H[K[7;33H[?12l[?25h[?25l\n[?12l[?25h[?25ln'[?12l[?25h[?25l[46m([m'\n'[46m)[?12l[?25h[?25l[m('\n'):[?12l[?25h[?25l[8;1H[K[8;1H[?12l[?25h[?25l [?12l[?25h[?25l i[?12l[?25h[?25lif[?12l[?25h[?25l [?12l[?25h[?25l l[?12l[?25h[?25lli[?12l[?25h[?25lin[?12l[?25h[?25lne[?12l[?25h[?25le.[?12l[?25h[?25l.s[?12l[?25h[?25lst[?12l[?25h[?25lta[?12l[?25h[?25lar[?12l[?25h[?25lrt[?12l[?25h[?25lts[?12l[?25h[?25lsw[?12l[?25h[?25lwi[?12l[?25h[?25lit[?12l[?25h[?25lth[?12l[?25h[?25lh([?12l[?25h[?25l('[?12l[?25h[?25l'#[?12l[?25h[?25l#'[?12l[?25h[?25l[46m([m'#'[46m)[?12l[?25h[?25l[m('#'):[?12l[?25h[?25l[9;1H[K[9;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l c[?12l[?25h[?25lco[?12l[?25h[?25lon[?12l[?25h[?25lnt[?12l[?25h[?25lti[?12l[?25h[?25lir[?12l[?25h[?25lru[?12l[?25h[?25lun[?12l[?25h[?25l[9;10H[K[9;10H[?12l[?25h[?25l[9;9H[K[9;9H[?12l[?25h[?25l[9;8H[K[9;8H[?12l[?25h[?25lin[?12l[?25h[?25lnu[?12l[?25h[?25lue[?12l[?25h[23;1H[K[9;10H[?25l[?12l[?25h[8;10H[?25l[23;1H[1m-- INSERT --[8;2H[?12l[?25h[?25l[m cif line.startswith('#'): c[?12l[?25h[?25lcoif line.startswith('#'): co[?12l[?25h[?25lonif line.startswith('#'): con[?12l[?25h[?25lntif line.startswith('#'): cont[?12l[?25h[?25liif line.startswith('#'):[8;7H[?12l[?25h[?25linif line.startswith('#'):[8;8H[?12l[?25h[?25lnuif line.startswith('#'):[8;9H[?12l[?25h[?25lueif line.startswith('#'):[8;10H[?12l[?25h[?25le if line.startswith('#'):[8;11H[?12l[?25h[23;1H[K[8;10H[?25l[?12l[?25h[?25l ontinue if line.startswith('#'):[8;34H[K[8;2H[?12l[?25h[?25l ntinue if line.startswith('#'):[8;33H[K[8;2H[?12l[?25h[?25l tinue if line.startswith('#'):[8;32H[K[8;2H[?12l[?25h[?25l inue if line.startswith('#'):[8;31H[K[8;2H[?12l[?25h[?25l nue if line.startswith('#'):[8;30H[K[8;2H[?12l[?25h[?25l ue if line.startswith('#'):[8;29H[K[8;2H[?12l[?25h[?25l e if line.startswith('#'):[8;28H[K[8;2H[?12l[?25h[?25l  if line.startswith('#'):[8;27H[K[8;2H[?12l[?25h[?25l if line.startswith('#'):[8;26H[K[8;2H[?12l[?25h
+ [?25l[23;1H[1m-- INSERT --[m[10;1H[K[10;1H[?12l[?25h[?25l [?12l[?25h[?25l l[?12l[?25h[?25lli[?12l[?25h[?25lin[?12l[?25h[?25lns[?12l[?25h[?25l[10;5H[K[10;5H[?12l[?25h[?25lne[?12l[?25h[?25les[?12l[?25h[?25l[10;6H[K[10;6H[?12l[?25h[?25le_[?12l[?25h[?25l_s[?12l[?25h[?25l [?12l[?25h[?25l =[?12l[?25h[?25l [?12l[?25h[?25l l[?12l[?25h[?25lli[?12l[?25h[?25lin[?12l[?25h[?25lne[?12l[?25h[?25le.[?12l[?25h[?25l.s[?12l[?25h[?25lsp[?12l[?25h[?25lpi[?12l[?25h[?25l[10;18H[K[10;18H[?12l[?25h[?25lpl[?12l[?25h[?25lli[?12l[?25h[?25lit[?12l[?25h[?25lt([?12l[?25h[?25l('[?12l[?25h[?25l':[?12l[?25h[?25l:'[?12l[?25h[?25l[46m([m':'[46m)[?12l[?25h[m[23;1H[K[10;25H[?25l[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[10;21H(':')[11;1H[K[11;1H[?12l[?25h[?25l [?12l[?25h[?25l i[?12l[?25h[?25lif[?12l[?25h[?25l [?12l[?25h[?25l i[?12l[?25h[?25lil[?12l[?25h[?25l[11;6H[K[11;6H[?12l[?25h[?25l[11;5H[K[11;5H[?12l[?25h[?25l l[?12l[?25h[?25lli[?12l[?25h[?25lin[?12l[?25h[?25lne[?12l[?25h[?25le_[?12l[?25h[?25l_s[?12l[?25h[?25ls[[?12l[?25h[?25l[2[?12l[?25h[?25l[46m[[m2[46m][?12l[?25h[?25l[m[2] [?12l[?25h[?25l =[?12l[?25h[?25l==[?12l[?25h[?25l [?12l[?25h[?25l u[?12l[?25h[?25lui[?12l[?25h[?25lid[?12l[?25h[?25ld:[?12l[?25h[?25l[12;1H[K[12;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l d[?12l[?25h[?25lda[?12l[?25h[?25lat[?12l[?25h[?25lta[?12l[?25h[?25la[[?12l[?25h[?25l[line_s[46m[[m2[46m][?12l[?25h[m[23;1H[K[12;16H[?25l[?12l[?25h[?25l[2][?12l[?25h[?25l[46m[][m[12;16H[K[12;15H[?12l[?25h[?25l[23;1H[1m-- INSERT --[12;15H[?12l[?25h[?25l[m[46m[[m1[46m][?12l[?25h[m[23;1H[K[12;15H[?25l[1][?12l[?25h[?25l[46m[[m1[46m][?12l[?25h[?25l[m[23;1H[1m-- INSERT --[12;17H[?12l[?25h[?25l[m[12;7H[46m[[mline_s[1][46m][?12l[?25h[?25l[m[12;7H[[9C] [?12l[?25h[?25l =[?12l[?25h[?25l [?12l[?25h[23;1H[K[12;20H[?25l[?12l[?25h[?25l[12;7H[46m[[9C][?12l[?25h[?25l[m[12;7H[line_s[46m[[m1[46m][m][?12l[?25h[?25l[1][?12l[?25h[?25l[46m[][m] = [?12l[?25h[?25l[23;1H[1m-- INSERT --[12;15H[?12l[?25h[?25l[m[46m[[m0[46m][m] =[?12l[?25h[23;1H[K[12;15H[?25l[0][?12l[?25h0]] =[?25l[23;1H[1m-- INSERT --[12;21H[?12l[?25h[?25l[m line_s[46m[[m0[46m][?12l[?25h[m[23;1H[K[12;29H[?25l[?12l[?25h[?25l[0][?12l[?25h[?25l[46m[][m[12;29H[K[12;28H[?12l[?25h[?25l[23;1H[1m-- INSERT --[12;28H[?12l[?25h[?25l[m[46m[[ma[46m][?12l[?25h[?25l[][m[12;29H[K[12;28H[?12l[?25h[?25l[46m[[m-[46m][?12l[?25h[?25l[m-1[46m][?12l[?25h[m[23;1H[K[12;29H[?25l[-1][?12l[?25h[11;21H[?25l[10;21H[46m([m':'[46m)[?12l[?25h[?25l[m(':')[9;10H[?12l[?25h[8;25H[7;29H[6;1H[?25l[23;1H[1m-- INSERT --[6;1H[?12l[?25h[?25l[md[?12l[?25h[?25lda[?12l[?25h[?25lat[?12l[?25h[?25lta[?12l[?25h[?25l [?12l[?25h[?25l =[?12l[?25h[?25l [?12l[?25h[?25l {[?12l[?25h[?25l[46m{}[?12l[?25h[m[23;1H[K[6;9H[?25l[?12l[?25h[?25l{}[7;9H[?12l[?25h[8;9H[9;9H[10;9H[11;9H[12;9H[?25l[23;1H[1m-- INSERT --[m[13;1H[K[13;1H[?12l[?25h[?25l [?12l[?25h[?25l r[?12l[?25h[?25lre[?12l[?25h[?25let[?12l[?25h[?25ltu[?12l[?25h[?25lur[?12l[?25h[?25lrn[?12l[?25h[?25l [?12l[?25h[?25l d[?12l[?25h[?25lda[?12l[?25h[?25lat[?12l[?25h[?25lta[?12l[?25h[23;1H[K[13;12H[?25l[?12l[?25h[12;10H[13;10H[?25lndata[13;12H[K[13;8H[?12l[?25h[?25l[23;1H[1m-- INSERT --[13;8H[?12l[?25h[?25l[mn(data[?12l[?25h[23;1H[K[13;8H[?25l[?12l[?25h(dat[?25l[23;1H[1m-- INSERT --[13;13H[?12l[?25h[?25l[m[46m([mdata[46m)[?12l[?25h[m[23;1H[K[13;13H[?25l[?12l[?25h[?25l(data)[12;13H[?12l[?25h[?25l[11;11H[46m[[m2[46m][?12l[?25h[?25l[m[2][10;13H[?12l[?25h[9;10H[8;13H[7;13H[?25l[6;8H[46m{}[?12l[?25h[?25l[m{}[7;13H[?12l[?25h[?25l[23;1H[1m-- INSERT --[7;22r[m[7;1H[L[1;23r[7;1H[?12l[?25h[?25ld[?12l[?25h[?25lde[?12l[?25h[?25lef[?12l[?25h[?25l [?12l[?25h[?25l f[?12l[?25h[?25lfi[?12l[?25h[?25lin[?12l[?25h[?25lnd[?12l[?25h[?25ld_[?12l[?25h[?25l_s[?12l[?25h[?25lsh[?12l[?25h[?25lhe[?12l[?25h[?25lel[?12l[?25h[?25ll([?12l[?25h[?25l(u[?12l[?25h[?25lui[?12l[?25h[?25lid[?12l[?25h[?25l[46m([muid[46m)[?12l[?25h[?25l[m(uid):[?12l[?25h[23;1H[K[7;19H[?25l[?12l[?25h[8;19H[?25l[23;1H[1m-- INSERT --[8;1H[?12l[?25h[?25l[m for line in passwd_file.split('\n'): [?12l[?25h[23;1H[K[8;1H[?25l[?12l[?25h
+ [?25l[23;1H[1m-- INSERT --[9;2H[?12l[?25h[?25l[m  if line.startswith('#'):  [?12l[?25h
+  [?25l  continue   [?12l[?25h[23;1H[K[10;3H[?25l[?12l[?25h
+ l[?25l[23;1H[1m-- INSERT --[11;2H[?12l[?25h[?25l[m  line_s = line.split(':')  [?12l[?25h
+ i[?25l  if line_s[2] == uid:  [?12l[?25h
+  [?25l  data[line_s[0]] = line_s[-1]   [?12l[?25h
+ re[?25l  return(data)  [?12l[?25h[23;1H[K[14;2H[?25l[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[15;1H[K[15;1H[?12l[?25h[?25l[16;1H[K[16;1H[?12l[?25h[23;1H[K[16;1H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" [New] 16L, 298C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ cat passwd
+cat: passwd: No such file or directory
+bash-3.2$ cat /etc/passwd
+##
+# User Database
+# 
+# Note that this file is consulted directly only when the system is running
+# in single-user mode.  At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false
+_appleevents:*:55:55:AppleEvents Daemon:/var/empty:/usr/bin/false
+_geod:*:56:56:Geo Services Daemon:/var/db/geod:/usr/bin/false
+_serialnumberd:*:58:58:Serial Number Daemon:/var/empty:/usr/bin/false
+_devdocs:*:59:59:Developer Documentation:/var/empty:/usr/bin/false
+_sandbox:*:60:60:Seatbelt:/var/empty:/usr/bin/false
+_mdnsresponder:*:65:65:mDNSResponder:/var/empty:/usr/bin/false
+_ard:*:67:67:Apple Remote Desktop:/var/empty:/usr/bin/false
+_www:*:70:70:World Wide Web Server:/Library/WebServer:/usr/bin/false
+_eppc:*:71:71:Apple Events User:/var/empty:/usr/bin/false
+_cvs:*:72:72:CVS Server:/var/empty:/usr/bin/false
+_svn:*:73:73:SVN Server:/var/empty:/usr/bin/false
+_mysql:*:74:74:MySQL Server:/var/empty:/usr/bin/false
+_sshd:*:75:75:sshd Privilege separation:/var/empty:/usr/bin/false
+_qtss:*:76:76:QuickTime Streaming Server:/var/empty:/usr/bin/false
+_cyrus:*:77:6:Cyrus Administrator:/var/imap:/usr/bin/false
+_mailman:*:78:78:Mailman List Server:/var/empty:/usr/bin/false
+_appserver:*:79:79:Application Server:/var/empty:/usr/bin/false
+_clamav:*:82:82:ClamAV Daemon:/var/virusmails:/usr/bin/false
+_amavisd:*:83:83:AMaViS Daemon:/var/virusmails:/usr/bin/false
+_jabber:*:84:84:Jabber XMPP Server:/var/empty:/usr/bin/false
+_appowner:*:87:87:Application Owner:/var/empty:/usr/bin/false
+_windowserver:*:88:88:WindowServer:/var/empty:/usr/bin/false
+_spotlight:*:89:89:Spotlight:/var/empty:/usr/bin/false
+_tokend:*:91:91:Token Daemon:/var/empty:/usr/bin/false
+_securityagent:*:92:92:SecurityAgent:/var/empty:/usr/bin/false
+_calendar:*:93:93:Calendar:/var/empty:/usr/bin/false
+_teamsserver:*:94:94:TeamsServer:/var/teamsserver:/usr/bin/false
+_update_sharing:*:95:-2:Update Sharing:/var/empty:/usr/bin/false
+_installer:*:96:-2:Installer:/var/empty:/usr/bin/false
+_atsserver:*:97:97:ATS Server:/var/empty:/usr/bin/false
+_ftp:*:98:-2:FTP Daemon:/var/empty:/usr/bin/false
+_unknown:*:99:99:Unknown User:/var/empty:/usr/bin/false
+_softwareupdate:*:200:200:Software Update Service:/var/empty:/usr/bin/false
+_coreaudiod:*:202:202:Core Audio Daemon:/var/empty:/usr/bin/false
+_screensaver:*:203:203:Screensaver:/var/empty:/usr/bin/false
+_locationd:*:205:205:Location Daemon:/var/db/locationd:/usr/bin/false
+_trustevaluationagent:*:208:208:Trust Evaluation Agent:/var/empty:/usr/bin/false
+_timezone:*:210:210:AutoTimeZoneDaemon:/var/empty:/usr/bin/false
+_lda:*:211:211:Local Delivery Agent:/var/empty:/usr/bin/false
+_cvmsroot:*:212:212:CVMS Root:/var/empty:/usr/bin/false
+_usbmuxd:*:213:213:iPhone OS Device Helper:/var/db/lockdown:/usr/bin/false
+_dovecot:*:214:6:Dovecot Administrator:/var/empty:/usr/bin/false
+_dpaudio:*:215:215:DP Audio:/var/empty:/usr/bin/false
+_postgres:*:216:216:PostgreSQL Server:/var/empty:/usr/bin/false
+_krbtgt:*:217:-2:Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_kadmin_admin:*:218:-2:Kerberos Admin Service:/var/empty:/usr/bin/false
+_kadmin_changepw:*:219:-2:Kerberos Change Password Service:/var/empty:/usr/bin/false
+_devicemgr:*:220:220:Device Management Server:/var/empty:/usr/bin/false
+_webauthserver:*:221:221:Web Auth Server:/var/empty:/usr/bin/false
+_netbios:*:222:222:NetBIOS:/var/empty:/usr/bin/false
+_warmd:*:224:224:Warm Daemon:/var/empty:/usr/bin/false
+_dovenull:*:227:227:Dovecot Authentication:/var/empty:/usr/bin/false
+_netstatistics:*:228:228:Network Statistics Daemon:/var/empty:/usr/bin/false
+_avbdeviced:*:229:-2:Ethernet AVB Device Daemon:/var/empty:/usr/bin/false
+_krb_krbtgt:*:230:-2:Open Directory Kerberos Ticket Granting Ticket:/var/empty:/usr/bin/false
+_krb_kadmin:*:231:-2:Open Directory Kerberos Admin Service:/var/empty:/usr/bin/false
+_krb_changepw:*:232:-2:Open Directory Kerberos Change Password Service:/var/empty:/usr/bin/false
+_krb_kerberos:*:233:-2:Open Directory Kerberos:/var/empty:/usr/bin/false
+_krb_anonymous:*:234:-2:Open Directory Kerberos Anonymous:/var/empty:/usr/bin/false
+_assetcache:*:235:235:Asset Cache Service:/var/empty:/usr/bin/false
+_coremediaiod:*:236:236:Core Media IO Daemon:/var/empty:/usr/bin/false
+_xcsbuildagent:*:237:237:Xcode Server Build Agent:/var/empty:/usr/bin/false
+_xcscredserver:*:238:238:Xcode Server Credential Server:/var/empty:/usr/bin/false
+_launchservicesd:*:239:239:_launchservicesd:/var/empty:/usr/bin/false
+bash-3.2$ vi find_shell.py 
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 16L, 298C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if line_s[2] == uid:
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+
+[94m~                                                                                   [18;1H~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h[16;1H[?25l~                                                                                   [15;1H[?12l[?25h[?25l[m[23;1H[1m-- INSERT --[m[23;13H[K[16;1H[K[16;1H[?12l[?25h[?25lf[?12l[?25h[?25lfi[?12l[?25h[?25lin[?12l[?25h[?25lnd[?12l[?25h[?25ld_[?12l[?25h[?25l_s[?12l[?25h[?25lsh[?12l[?25h[?25lhe[?12l[?25h[?25lel[?12l[?25h[?25ll([?12l[?25h[?25l(2[?12l[?25h[?25l23[?12l[?25h[?25l31[?12l[?25h[?25l[46m([m231[46m)[?12l[?25h[m[23;1H[K[16;14H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx[?25l[23;1H[K[16;14H[?12l[?25h[?25l(231)[15;1H[?12l[?25h[?25l[16;10H[46m([m231[46m)[?12l[?25h[?25l[m(231)[?12l[?25h[?25l[23;1H[1m-- INSERT --[16;1H[?12l[?25h[?25l[mpfind_shel(231)p[?12l[?25h[?25lprfind_shel(231)pr[?12l[?25h[?25lrifind_shel(231)pri[?12l[?25h[?25linfind_shel(231)prin[?12l[?25h[?25lntfind_shel(231)print[?12l[?25h[?25lt_find_shel(231)[16;7H[?12l[?25h[?25l_tfind_shel(231)[16;8H[?12l[?25h[?25lthfind_shel(231)[16;9H[?12l[?25h[?25lhifind_shel(231)[16;10H[?12l[?25h[?25lisfind_shel(231)[16;11H[?12l[?25h[?25ls find_shel(231)[16;12H[?12l[?25h[?25l =find_shel(231)[16;13H[?12l[?25h[?25l= find_shel(231)[16;14H[?12l[?25h[23;1H[K[16;13H[?25l[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[17;1H[K[17;1H[?12l[?25h[?25lp[?12l[?25h[?25lpr[?12l[?25h[?25lri[?12l[?25h[?25lin[?12l[?25h[?25lnt[?12l[?25h[?25lt([?12l[?25h[?25l(print_this[?12l[?25h[?25lprint[46m([m[9Cs[46m)[?12l[?25h[m[23;1H[K[17;17H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 17L, 343C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[2Pcat /etc/passwdçpyth
+bash-3.2$ python find_shell.py 
+{}
+bash-3.2$ vi find_shell.py 
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 17L, 343C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if line_s[2] == uid:
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel(231)
+print(print_this)
+[94m~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+[m  if [?25l[23;1H[1m-- INSERT --[m[23;13H[K[12;6H[?12l[?25h[?25l iline_s[2] == uid:[12;7H[?12l[?25h[?25linline_s[2] == uid:[12;8H[?12l[?25h[?25lntline_s[2] == uid:[12;9H[?12l[?25h[23;1H[K[12;8H[?25l[?12l[?25ht[?25l[23;1H[1m-- INSERT --[12;9H[?12l[?25h[?25l[mt(line_s[2] == uid:[12;10H[?12l[?25h[23;1H[K[12;9H[?25l[?12l[?25h(line_[?25ls[46m[[m2[46m][?12l[?25h[?25l[m[2][?12l[?25h[?25l[46m[[m2[46m][?12l[?25h[?25l[m[23;1H[1m-- INSERT --[12;19H[?12l[?25h[?25l[m[12;9H[46m([mline_s[2][46m)[m == uid:[12;20H[?12l[?25h[23;1H[K[12;19H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 17L, 348C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[4@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+{}
+bash-3.2$ python find_shell.py [C[C[C[C[C[C[C[C[C[C[4Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 17L, 348C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if int(line_s[2]) == uid:
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel(231)
+print(print_this)
+[94m~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+[m  if [?25l nt(line_s[2]) == uid:[12;27H[K[12;6H[?12l[?25h[?25l t(line_s[2]) == uid:[12;26H[K[12;6H[?12l[?25h[?25l [46m([mline_s[2][46m)[m == uid:[12;25H[K[12;6H[?12l[?25h[?25l line_s[2]) == uid:[12;24H[K[12;6H[?12l[?25hline_[?25ls[46m[[m2[46m][?12l[?25h[?25l[m[2][?12l[?25h[?25l[46m[[m2[46m][?12l[?25h[?25l[m[2][?12l[?25h[?25l] == uid:[12;23H[K[12;15H[?12l[?25h == [?25l[23;1H[1m-- INSERT --[m[23;13H[K[12;19H[?12l[?25h[?25l suid:[?12l[?25h[?25lstuid:[?12l[?25h[?25ltruid:[?12l[?25h[?25lr(uid:[?12l[?25h[23;1H[K[12;22H[?25l[?12l[?25h(ui[?25l[23;1H[1m-- INSERT --[12;26H[?12l[?25h[?25l[m[46m([muid[46m)[m:[?12l[?25h[23;1H[K[12;26H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 17L, 348C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[4@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+{}
+bash-3.2$ vi find_shell.py 
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 17L, 348C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if line_s[2] == str(uid):
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel(231)
+print(print_this)
+[94m~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+[?25l[m[23;1H[K[23;1H:[?12l[?25hq[?25l[23;1H[K[23;1H[?1l>[?12l[?25h[?1049lbash-3.2$ vi /etc/passwd
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/passwd" [readonly] 86L, 5253C[>c[1;1H##
+# User Database
+#
+# Note that this file is consulted directly only when the system is running
+# in single-user mode.  At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false[1;1H[?12l[?25h[?25l[23;1H[K[23;1H:[14;1H[7m/private/etc/passwd [RO]                                                            [m[15;1H[94m:[m'<,'>q[15;8H[K[16;1H[94m:[m1[16;3H[K[17;1H[94m:[mq![17;4H[K[18;1H[94m:[mx[18;3H[K[19;1H[94m:[mx![19;4H[K[20;1H[94m:[mq[20;3H[K[21;1H[94m:[m[21;2H[K[22;1H[1m[7m[Command Line]                                                                      [21;2H[?12l[?25h
+
+[?25l[m[14;1H_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico[14;72H[K[15;1H_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false[22;56H[K[1;1H[?12l[?25h[?25l[23;1H[K[23;1H:[?12l[?25hq![?25l[23;1H[K[23;1H[?1l>[?12l[?25h[?1049lbash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ pytoh[K[Khon
+Python 2.7.10 (default, Oct 23 2015, 19:19:21) 
+[GCC 4.2.1 Compatible Apple LLVM 7.0.0 (clang-700.0.59.5)] on darwin
+Type "help", "copyright", "credits" or "license" for more information.
+>>> line = _taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false[5Gline = [1@'_[74G'
+>>> line.split(':')
+['_taskgated', '*', '13', '13', 'Task Gate Daemon', '/var/empty', '/usr/bin/false']
+>>> exit()
+bash-3.2$ pythonvi /etc/passwd
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/passwd" [readonly] 86L, 5253C[>c[1;1H##
+# User Database
+#
+# Note that this file is consulted directly only when the system is running
+# in single-user mode.  At other times this information is provided by
+# Open Directory.
+#
+# See the opendirectoryd(8) man page for additional information about
+# Open Directory.
+##
+nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_mcxalr:*:54:54:MCX AppLaunch:/var/empty:/usr/bin/false[1;1H[?12l[?25h[?25l[23;1H[K[23;1H:[?12l[?25hq[?25l[23;1H[K[23;1H[?1l>[?12l[?25h[?1049lbash-3.2$ ls -ltr
+total 3800
+-rw-r--r--   1 nagee  staff      223 Jul 24 18:13 one.py
+-rw-r--r--   1 nagee  staff      836 Jul 24 18:14 one.pyc
+-rw-r--r--   1 nagee  staff      212 Jul 29 21:10 inheritence
+-rw-r--r--   1 nagee  staff      207 Jul 29 21:45 exception
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:54 example.log
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:56 log
+-rw-r--r--   1 nagee  staff      535 Jul 29 22:34 kanna.pyc
+-rw-r--r--   1 nagee  staff      531 Jul 29 22:34 raja.pyc
+drwxr-xr-x   4 nagee  staff      136 Jul 29 22:37 new_dir
+-rw-r--r--   1 nagee  staff    52912 Jul 29 22:40 class-Jul29th
+-rw-r--r--   1 nagee  staff  1279626 Jul 29 22:40 25thJuly
+-rw-r--r--   1 nagee  staff      241 Aug  4 22:16 4
+-rw-r--r--   1 nagee  staff      667 Aug  4 22:27 c
+-rw-r--r--   1 nagee  staff      550 Aug  4 22:28 ex
+-rw-r--r--   1 nagee  staff      343 Aug  6 18:14 3
+-rw-r--r--   1 nagee  staff      333 Aug  6 18:37 st
+-rw-r--r--   1 nagee  staff      172 Aug  6 21:45 class_one
+-rw-r--r--   1 nagee  staff      378 Aug  6 21:56 class_method
+drwxr-xr-x  14 nagee  staff      476 Aug 24 21:26 python
+-rw-r--r--   1 nagee  staff   482542 Aug 26 15:40 24thAug
+-rw-r--r--   1 nagee  staff      348 Aug 26 16:30 find_shell.py
+-rw-r--r--   1 nagee  staff    58765 Aug 26 16:31 26thAug
+bash-3.2$ ls -ltr
+total 3800
+-rw-r--r--   1 nagee  staff      223 Jul 24 18:13 one.py
+-rw-r--r--   1 nagee  staff      836 Jul 24 18:14 one.pyc
+-rw-r--r--   1 nagee  staff      212 Jul 29 21:10 inheritence
+-rw-r--r--   1 nagee  staff      207 Jul 29 21:45 exception
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:54 example.log
+-rw-r--r--   1 nagee  staff      191 Jul 29 21:56 log
+-rw-r--r--   1 nagee  staff      535 Jul 29 22:34 kanna.pyc
+-rw-r--r--   1 nagee  staff      531 Jul 29 22:34 raja.pyc
+drwxr-xr-x   4 nagee  staff      136 Jul 29 22:37 new_dir
+-rw-r--r--   1 nagee  staff    52912 Jul 29 22:40 class-Jul29th
+-rw-r--r--   1 nagee  staff  1279626 Jul 29 22:40 25thJuly
+-rw-r--r--   1 nagee  staff      241 Aug  4 22:16 4
+-rw-r--r--   1 nagee  staff      667 Aug  4 22:27 c
+-rw-r--r--   1 nagee  staff      550 Aug  4 22:28 ex
+-rw-r--r--   1 nagee  staff      343 Aug  6 18:14 3
+-rw-r--r--   1 nagee  staff      333 Aug  6 18:37 st
+-rw-r--r--   1 nagee  staff      172 Aug  6 21:45 class_one
+-rw-r--r--   1 nagee  staff      378 Aug  6 21:56 class_method
+drwxr-xr-x  14 nagee  staff      476 Aug 24 21:26 python
+-rw-r--r--   1 nagee  staff   482542 Aug 26 15:40 24thAug
+-rw-r--r--   1 nagee  staff      348 Aug 26 16:30 find_shell.py
+-rw-r--r--   1 nagee  staff    58765 Aug 26 16:31 26thAug
+bash-3.2$ vi find_shell.py
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 17L, 348C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if line_s[2] == str(uid):
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel(231)
+print(print_this)
+[94m~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+[m  if line_[?25ls[46m[[m2[46m][?12l[?25h[?25l[m[2][?12l[?25h[13;13H[14;13H
+[16;13H find_sh[15;1H[?25l[14;9H[46m([mdata[46m)[?12l[?25h[?25l[m(data)[13;21H[?12l[?25h[12;21H[?25l tr(uid):[12;27H[K[12;19H[?12l[?25h[?25l r(uid):[12;26H[K[12;19H[?12l[?25h[?25l [46m([muid[46m)[m:[12;25H[K[12;19H[?12l[?25h[?25l uid):[12;24H[K[12;19H[?12l[?25huid[?25ld:[12;23H[K[12;22H[?12l[?25h[13;22H[?25l[14;9H[46m([mdata[46m)[?12l[?25h[?25l[m(data)
+[?12l[?25h[16;22H[?25ll[46m([m231[46m)[?12l[?25h[?25l[m[23;1H[1m-- INSERT --[m[23;13H[K[16;24H[?12l[?25h[?25l('231)[?12l[?25h[23;1H[K[16;24H[?25l[?12l[?25h'23[?25l[23;1H[1m-- INSERT --[m[16;23H[46m([m'231[46m)[?12l[?25h[?25l[m1'[46m)[?12l[?25h[m[23;1H[K[16;28H[?25l('231')[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 17L, 345C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ python find_shell.py 
+{}
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ c[Kvi find_shell.py 
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 17L, 345C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if line_s[2] == uid:
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel('231')
+print(print_this)
+[94m~                                                                                   [19;1H~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+[11;1H[m 
+ 
+   dat[?25la[46m[[9C][13;8H[?12l[?25h[?25l[m[[9C][13;9H[?12l[?25hline_[?25ls[46m[[m0[46m][?12l[?25h[?25l[m[0][12;15H[?12l[?25h[11;15H[10;11H[9;15H[10;11H[11;15H[12;15H[?25l[13;15H[46m[[m0[46m][?12l[?25h[?25l[m[0][14;9H[46m([mdata[46m)[?12l[?25h[?25l[m(data)
+[?12l[?25h[16;15Hind_she[?25ll[46m([m'231'[46m)[16;23H[?12l[?25h[?25l[m('231')[?12l[?25h'231[15;1H[?25l[14;9H[46m([mdata[46m)[?12l[?25h[?25l[13;28H[[m-1[46m][m[14;9H(data)[13;28H[?12l[?25h[?25l[-1][?12l[?25h[?25l[14;9H[46m([mdata[46m)[?12l[?25h[?25l[m(data)
+[?12l[?25h[?25l[14;9H[46m([mdata[46m)[?12l[?25h[?25l[m(data)[13;22H[?12l[?25h[12;22H[?25l[11;22H[46m([m':'[46m)[?12l[?25h[?25l[m(':')[12;22H[?12l[?25h[13;22H[?25l[13;8H[46m[[9C][?12l[?25h[?25l[m[13;8H[[9C][12;18H[?12l[?25h[11;18H[?25l[23;1H[1m-- INSERT --[m[23;13H[K[12;22r[12;1H[L[1;23r[12;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l p[?12l[?25h[?25lpr[?12l[?25h[?25lri[?12l[?25h[?25lin[?12l[?25h[?25lnt[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25lt([?12l[?25h[?25l(line_s[46m[[m2[46m][?12l[?25h[?25l[12;8H([mline_s[2][46m)[?12l[?25h[m[23;1H[K[12;18H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 18L, 364C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[4@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+-2
+{}
+bash-3.2$ vi find_shell.py 
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 18L, 364C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  print(line_s[2])
+  if line_s[2] == uid:
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel('231')
+print(print_this)
+[94m~                                                                                   [20;1H~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+[?25l[m[23;1H[1m-- INSERT --[m[23;13H[K[12;22r[12;1H[L[1;23r[12;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l p[?12l[?25h[?25lpr[?12l[?25h[?25lri[?12l[?25h[?25lin[?12l[?25h[?25lnt[?12l[?25h[?25lt([?12l[?25h[?25l(line_s[?12l[?25h[?25l[12;8H[46m([mline_s[46m)[?12l[?25h[m[23;1H[K[12;15H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 19L, 380C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[4@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+['nobody', '*', '-2', '-2', 'Unprivileged User', '/var/empty', '/usr/bin/false']
+-2
+{}
+bash-3.2$ python find_shell.py [C[C[C[C[C[C[C[C[C[C[4Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 19L, 380C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  print(line_s)
+  print(line_s[2])
+  if line_s[2] == uid:
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel('231')
+print(print_this)
+[94m~                                                                                   [21;1H~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+[m  [?25l[23;1H[1m-- INSERT --[m[23;13H[K[15;22r[15;1H[L[1;23r[15;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l print(line_s[?12l[?25h[?25ls,[?12l[?25h[?25l [?12l[?25h[?25l[?12l[?25h[?25l[15;16H[K[15;16H[?12l[?25h[?25l[15;9H[46m([mline_s[46m)[?12l[?25h[m[23;1H[K[15;16H[?25l[?12l[?25h[?25l[23;1H:[?12l[?25hx![?25l"find_shell.py" 20L, 397C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[4@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+['nobody', '*', '-2', '-2', 'Unprivileged User', '/var/empty', '/usr/bin/false']
+-2
+{}
+bash-3.2$ python find_shell.py [C[C[C[C[C[C[C[C[C[C[4Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?1049h[?1h=[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"find_shell.py" 20L, 397C[>c[1;1H#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  print(line_s)
+  print(line_s[2])
+  if line_s[2] == uid:
+   print(line_s)
+   data[line_s[0]] = line_s[-1]
+  return(data)
+
+print_this = find_shel('231')
+print(print_this)
+[94m~                                                                                   [22;1H~                                                                                   [1;1H[?12l[?25h
+
+
+
+
+
+
+
+
+
+
+
+
+[m  i
+   prin[14;8H[?25l[13;8H[46m([9C)[13;8H[?12l[?25h[?25l[12;8H([mline_s[46m)[m[13;8H([9C)[12;8H[?12l[?25h[?25l(line_s)[11;8H[?12l[?25h[?25l[12;8H[46m([mline_s[46m)[12;8H[?12l[?25h[?25l[m(line_s)[13;8H[46m([9C)[13;8H[?12l[?25h[?25l[12;8H([mline_s[46m)[m[13;8H([9C)[12;8H[?12l[?25h[?25l(line_s)[11;8H[?12l[?25h[?25l[12;8H[46m([mline_s[46m)[12;8H[?12l[?25h[?25l[m(line_s)[13;8H[46m([9C)[13;8H[?12l[?25h[?25l[m([9C)[14;8H[?12l[?25h[15;8H[?25l[16;8H[46m[[9C][16;8H[?12l[?25h[?25l[m[[9C][17;8H[?12l[?25h
+[17;8H[?25l return(data)[17;14H[K[17;2H[?12l[?25h[16;2H[15;2H[14;2H[13;2H[12;2H[11;2H[10;2H[9;2H[8;2H
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ [15;2H[14;2H[13;2H[12;2H[?25l[12;22r[22;1H
+[1;23r[22;1H[94m~                                                                                   [m[23;1H[K[12;3H[?12l[?25h[?25l[12;22r[22;1H
+[1;23r[22;1H[94m~                                                                                   [12;3H[?12l[?25h
+[m  
+  [13;3H[?25l[13;22r[22;1H
+[1;23r[22;1H[94m~                                                                                   [13;4H[?12l[?25h[?25l[23;1H[m:[?12l[?25hx![?25l"find_shell.py" 17L, 344C written
+[?1l>[?12l[?25h[?1049lbash-3.2$ vi find_shell.py [C[C[C[C[C[C[C[C[C[C[4@python[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+{'_krb_kadmin': '/usr/bin/false'}
+bash-3.2$ cat find_shell.py 
+#!/usr/bin/env python
+
+import commands
+
+passwd_file = commands.getoutput('cat /etc/passwd')
+data = {}
+def find_shel(uid):
+ for line in passwd_file.split('\n'):
+  if line.startswith('#'):
+   continue
+  line_s = line.split(':')
+  if line_s[2] == uid:
+   data[line_s[0]] = line_s[-1]
+ return(data)
+
+print_this = find_shel('231')
+print(print_this)
+bash-3.2$ python find_shell.py
+{'_krb_kadmin': '/usr/bin/false'}
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ git c[Kadd *
+fatal: Not a git repository (or any of the parent directories): .git
+bash-3.2$ pwd
+/Users/nagee/class
+bash-3.2$ git clien[12@(reverse-i-search)`':[C[C[C[C[C[C[C[C[C[C
+bash-3.2$ git clone https://github.com/l
